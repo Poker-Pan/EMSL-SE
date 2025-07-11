@@ -90,7 +90,7 @@ class Gnerate_node(object):
             if type_surface == 'Sphere':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes'] / 2
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -99,7 +99,7 @@ class Gnerate_node(object):
             elif type_surface == 'Sphere1':
                 file_name = 'Sphere'
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes'] / 2 + 0.25
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -108,7 +108,7 @@ class Gnerate_node(object):
             elif type_surface == 'Sphere2':
                 file_name = 'Sphere'
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes'] / 2
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -117,7 +117,7 @@ class Gnerate_node(object):
             elif type_surface == 'Sphere3':
                 file_name = 'Sphere'
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -128,7 +128,7 @@ class Gnerate_node(object):
             elif type_surface == 'Peanut':
                 file_name = 'Peanut'
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -137,10 +137,10 @@ class Gnerate_node(object):
             elif type_surface == 'Torus':
                 file_name = type_surface
 
-                # load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                # load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 # nodes_space = load_data['nodes']
-                nodes_space = np.load('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.npy')
-                elements = np.load('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '_elements.npy')
+                nodes_space = np.load('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.npy')
+                elements = np.load('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '_elements.npy')
                 elements = elements
                 normal = nodes_space #load_data['normal']
                 self.Key_Para['nodes_center'] = np.array([0.5, 0.5, 0.5])
@@ -148,7 +148,7 @@ class Gnerate_node(object):
             elif type_surface == 'Opener':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -157,7 +157,7 @@ class Gnerate_node(object):
             elif type_surface == 'Ellipsoid':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -166,7 +166,7 @@ class Gnerate_node(object):
             elif type_surface == 'Ellipsoid1':
                 file_name = 'Ellipsoid'
 
-                load_data = np.load('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_n_' + str(self.Key_Para['Num_Nodes_s']) + '.npy')
+                load_data = np.load('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_n_' + str(self.Key_Para['Num_Nodes_s']) + '.npy')
                 nodes_space = load_data
                 elements = nodes_space
                 normal = nodes_space
@@ -176,7 +176,7 @@ class Gnerate_node(object):
             elif type_surface == 'cow':
                 file_name = type_surface
 
-                load_data = trimesh.load('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.obj')
+                load_data = trimesh.load('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.obj')
                 nodes_space = np.array(load_data.vertices[:, [0, 2, 1]])
                 nodes_space = nodes_space
                 elements = load_data.faces
@@ -185,7 +185,7 @@ class Gnerate_node(object):
             elif type_surface == 'armadillo':
                 file_name = type_surface
 
-                load_data = trimesh.load('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.obj')
+                load_data = trimesh.load('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.obj')
                 nodes_space = np.array(load_data.vertices[:, [0, 2, 1]])
                 elements = load_data.faces
                 normal = np.array(load_data.vertex_normals[:, [0, 2, 1]])
@@ -193,7 +193,7 @@ class Gnerate_node(object):
             elif type_surface == 'face':
                 file_name = type_surface
 
-                load_data = trimesh.load('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.obj')
+                load_data = trimesh.load('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.obj')
                 nodes_space = np.array(load_data.vertices)
                 elements = load_data.faces
                 normal = np.array(load_data.vertex_normals)
@@ -201,7 +201,7 @@ class Gnerate_node(object):
             elif type_surface == 'Airplane':
                 file_name = type_surface
 
-                load_data = trimesh.load('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.obj')
+                load_data = trimesh.load('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.obj')
                 nodes_space = np.array(load_data.vertices)
                 nodes_space = nodes_space
                 elements = load_data.faces
@@ -210,7 +210,7 @@ class Gnerate_node(object):
             elif type_surface == 'fish':
                 file_name = type_surface
 
-                load_data = trimesh.load('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.obj')
+                load_data = trimesh.load('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.obj')
                 nodes_space = np.array(load_data.vertices)
                 nodes_space = (nodes_space + 1) / 2
                 elements = load_data.faces
@@ -219,7 +219,7 @@ class Gnerate_node(object):
             elif type_surface == 'blub':
                 file_name = type_surface
 
-                load_data = trimesh.load('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.obj')
+                load_data = trimesh.load('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.obj')
                 nodes_space = np.array(load_data.vertices)
                 nodes_space = nodes_space
                 elements = load_data.faces
@@ -228,7 +228,7 @@ class Gnerate_node(object):
             elif type_surface == 'Dumbbell_Sphere':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -237,7 +237,7 @@ class Gnerate_node(object):
             elif type_surface == 'Dumbbell_Singular':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -246,7 +246,7 @@ class Gnerate_node(object):
             elif type_surface == 'New_Peanut':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -376,126 +376,14 @@ class Solver(object):
         self.Key_Para = Key_Para
         self.gen_Nodes = gen_Nodes
     
-    def nodes_rho_solver(self, elements, cur_dt, dt, temp_nodes, extrapola_nodes, temp_S, id_B):
+    def nodes_rho_solver(self, elements, cur_dt, dt, temp_nodes, temp_S, id_BDF):
         v_exact = np.zeros_like(temp_nodes[0])
-        if self.Key_Para['type_surface'] == 'New_Peanut':
-            def V_exact(self, t, nodes):
-                a = 0.1 + 0.05*np.sin(2*np.pi*t)
-                a_t = 0.05*2*np.pi*np.cos(2*np.pi*t)
-                L = 1 + 0.2*np.sin(4*np.pi*t)
-                L_t = 0.2*4*np.pi*np.cos(4*np.pi*t)
-                s = nodes[:, 2]**2 / L**2
-                s_t = (-2*nodes[:, 2]**2 / L**3) * L_t
-                s_z = 2*nodes[:, 2] / L**2
-                
-                phi_t = (-2*nodes[:, 0]**2 / a**3) * a_t + (-2*nodes[:, 1]**2 / a**3) * a_t + 400*s*s_t - 199*s_t
-                phi_x = (2*nodes[:, 0] / a**2)
-                phi_y = (2*nodes[:, 1] / a**2)
-                phi_z = 400*s*s_z - 199*s_z
-                phi_grad = np.array([phi_x, phi_y, phi_z]).T
-                phi_grad_norm = np.linalg.norm(phi_grad, axis=1)
-                v = -(np.dot(np.diag(phi_t), phi_grad)) / (phi_grad_norm.reshape(-1, 1)**2)
-                return v
-
-            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
-        elif self.Key_Para['type_surface'] == 'Sphere':
-            def V_exact(self, t, nodes):
-                v = np.zeros_like(nodes)
-                r = np.linalg.norm(nodes, axis=1)
-                v[:, 0] = nodes[:, 0]*(1 - r)
-                v[:, 1] = nodes[:, 1]*(1 - r)
-                v[:, 2] = nodes[:, 2]*(1 - r)
-                return v
-
-            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
-        elif self.Key_Para['type_surface'] == 'Sphere1':
-            def V_exact(self, t, nodes):
-                v = np.zeros_like(nodes)
-                r = np.linalg.norm(nodes, axis=1)
-                v[:, 0] = nodes[:, 0]*(1 - r)
-                v[:, 1] = nodes[:, 1]*(1 - r)
-                v[:, 2] = nodes[:, 2]*(1 - r)
-                return v
-
-            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
-        elif self.Key_Para['type_surface'] == 'Sphere3':
-            def V_exact(self, t, nodes):
-                a = 0.1 + 0.05*np.sin(2*np.pi*t)
-                a_t = 0.05*2*np.pi*np.cos(2*np.pi*t)
-                L = 1 + 0.2*np.sin(4*np.pi*t)
-                L_t = 0.2*4*np.pi*np.cos(4*np.pi*t)
-                s = nodes[:, 2]**2 / L**2
-                s_t = (-2*nodes[:, 2]**2 / L**3) * L_t
-                s_z = 2*nodes[:, 2] / L**2
-                
-                phi_t = (-2*nodes[:, 0]**2 / a**3) * a_t + (-2*nodes[:, 1]**2 / a**3) * a_t + 400*s*s_t - 199*s_t
-                phi_x = (2*nodes[:, 0] / a**2)
-                phi_y = (2*nodes[:, 1] / a**2)
-                phi_z = 400*s*s_z - 199*s_z
-                phi_grad = np.array([phi_x, phi_y, phi_z]).T
-                phi_grad_norm = np.linalg.norm(phi_grad, axis=1)
-                v = -(np.dot(np.diag(phi_t), phi_grad)) / (phi_grad_norm.reshape(-1, 1)**2)
-                return v
-
-            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
-        elif self.Key_Para['type_surface'] == 'Sphere':
-            def V_exact(self, t, nodes):
-                v = np.zeros_like(nodes)
-                r = np.linalg.norm(nodes, axis=1)
-                v[:, 0] = nodes[:, 0]*(1 - r)
-                v[:, 1] = nodes[:, 1]*(1 - r)
-                v[:, 2] = nodes[:, 2]*(1 - r)
-                return v
-
-            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
-        elif self.Key_Para['type_surface'] == 'Torus':
-            def V_exact1(self, t, nodes):
-                v = np.zeros_like(nodes)
-                r = np.linalg.norm(nodes, axis=1)
-                v[:, 0] = nodes[:, 0]*(1 - r)
-                v[:, 1] = nodes[:, 1]*(1 - r)
-                v[:, 2] = nodes[:, 2]*(1 - r)
-                return v
-
-            def V_exact2(self, t, nodes):
-                v = np.zeros_like(nodes)
-                r = np.linalg.norm(nodes, axis=1)
-                v[:, 0] = 3000*(nodes[:, 0]+0.5)*(r - 1)
-                v[:, 1] = 2000*(nodes[:, 1]+0.5)*(r - 1)
-                v[:, 2] = 1000*(nodes[:, 2]+0.5)*(r - 1)
-                return v
-            
-            def V_exact(self, t, nodes):
-                v = np.zeros_like(nodes)
-                r = np.linalg.norm(nodes, axis=1)
-                v[:, 0] = 500*np.cos(np.pi*nodes[:, 0])*np.sin(np.pi*nodes[:, 1])*np.sin(np.pi*nodes[:, 2])
-                v[:, 1] = 500*np.sin(np.pi*nodes[:, 0])*np.cos(np.pi*nodes[:, 1])*np.sin(np.pi*nodes[:, 2])
-                v[:, 2] = 500*np.sin(np.pi*nodes[:, 0])*np.sin(np.pi*nodes[:, 1])*np.cos(np.pi*nodes[:, 2])
-                return v
-            
-            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
-        elif self.Key_Para['type_surface'] == 'Peanut':
-            def V_exact(self, t, nodes):
-                a = 0.1 + 0.05*np.sin(2*np.pi*t)
-                a_t = 0.05*2*np.pi*np.cos(2*np.pi*t)
-                L = 1 + 0.05*np.sin(4*np.pi*t)
-                L_t = 0.05*4*np.pi*np.cos(4*np.pi*t)
-                s = nodes[:, 2]**2 / L**2
-                s_t = (-2*nodes[:, 2]**2 / L**3) * L_t
-                s_z = 2*nodes[:, 2] / L**2
-                
-                phi_t = (-2*nodes[:, 0]**2 / a**3) * a_t + (-2*nodes[:, 1]**2 / a**3) * a_t + 400*s*s_t - 199*s_t
-                phi_x = (2*nodes[:, 0] / a**2)
-                phi_y = (2*nodes[:, 1] / a**2)
-                phi_z = 400*s*s_z - 199*s_z
-                phi_grad = np.array([phi_x, phi_y, phi_z]).T
-                phi_grad_norm = np.linalg.norm(phi_grad, axis=1)
-                v = -(np.dot(np.diag(phi_t), phi_grad)) / (phi_grad_norm.reshape(-1, 1)**2)
-                return v
-
-
-            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
-
+        self.gen_Nodes.oprater_nodes(temp_nodes[0], elements)
+        rho_0 = 1 / self.Key_Para['nodes_area']
+        S_0 = np.log(rho_0).reshape(-1)
+        self.gen_Nodes.oprater_nodes(temp_nodes[1], elements)
+        rho_1 = 1 / self.Key_Para['nodes_area']
+        S_1 = np.log(rho_1).reshape(-1)
 
         l0 = scipy.sparse.diags(np.zeros(temp_nodes[0].shape[0]), 0)
         l1 = scipy.sparse.diags(np.ones(temp_nodes[0].shape[0]), 0)
@@ -504,19 +392,25 @@ class Solver(object):
         l4 = self.Key_Para['A_coef_grad'][1]
         l5 = self.Key_Para['A_coef_grad'][2]
         
-        if id_B == 1:
+        if id_BDF == 1:
             a = 1
             BDF_nodes = temp_nodes[0]
             BDF_S = temp_S[0]
-        elif id_B == 2:
-            a = 3/2
-            BDF_nodes = 2*temp_nodes[0] - (1/2)*temp_nodes[1]
-            BDF_S = 2*temp_S[0] - (1/2)*temp_S[1]
-        elif id_B == 3:
+        elif id_BDF == 2:
+            if self.Key_Para['dt_i'] % 100 == 0:
+                a = 3/2
+                BDF_nodes = 2*temp_nodes[0] - (1/2)*temp_nodes[1]
+                BDF_S = 2*(S_0 + temp_S[0])/2 - (1/2)*(S_1 + temp_S[1])/2
+                # BDF_S = 2*temp_S[0] - (1/2)*temp_S[1]
+            else:
+                a = 3/2
+                BDF_nodes = 2*temp_nodes[0] - (1/2)*temp_nodes[1]
+                BDF_S = 2*temp_S[0] - (1/2)*temp_S[1]
+        elif id_BDF == 3:
             a = 11/6
             BDF_nodes = 3*temp_nodes[0] - (3/2)*temp_nodes[1] + (1/3)*temp_nodes[2]
             BDF_S = 3*temp_S[0] - (3/2)*temp_S[1] + (1/3)*temp_S[2]
-        elif id_B == 4:
+        elif id_BDF == 4:
             a = 25/12
             BDF_nodes = 4*temp_nodes[0] - 3*temp_nodes[1] + (4/3)*temp_nodes[2] - (1/4)*temp_nodes[3]
             BDF_S = 4*temp_S[0] - 3*temp_S[1] + (4/3)*temp_S[2] - (1/4)*temp_S[3]
@@ -531,28 +425,33 @@ class Solver(object):
         r22 = v_exact[:, 1]
         r33 = v_exact[:, 2]
         r44 = l3.dot(v_exact[:, 0]) + l4.dot(v_exact[:, 1]) + l5.dot(v_exact[:, 2])
+
+        p = np.exp(3*(np.cos(temp_nodes[0][:, 2]) + 1))
+        log_p = np.log(p)
+        r111 = l3.dot(log_p)
+        r222 = l4.dot(log_p)
+        r333 = l5.dot(log_p)
+        r444 = l2.dot(log_p)
+
         
         Full_A = scipy.sparse.vstack((scipy.sparse.hstack((a*(1/dt)*l1, l0, l0, self.Key_Para['eta']*l3)), 
                                       scipy.sparse.hstack((l0, a*(1/dt)*l1, l0, self.Key_Para['eta']*l4)), 
                                       scipy.sparse.hstack((l0, l0, a*(1/dt)*l1, self.Key_Para['eta']*l5)),
                                       scipy.sparse.hstack((l0, l0, l0, a*(1/dt)*l1 - self.Key_Para['eta']*l2)))).tocsr()
-        Full_b = np.hstack(((1/dt)*r1 + r11, (1/dt)*r2 + r22, (1/dt)*r3 + r33, (1/dt)*r4 - r44))
+        Full_b = np.hstack(((1/dt)*r1 + r11 + self.Key_Para['eta']*r111, (1/dt)*r2 + r22 + self.Key_Para['eta']*r222, (1/dt)*r3 + r33+ self.Key_Para['eta']*r333, (1/dt)*r4 - r44 - self.Key_Para['eta']*r444))
         new_sovle = scipy.sparse.linalg.spsolve(Full_A, Full_b)
         new_nodes = new_sovle[0:3*temp_nodes[0].shape[0]].reshape(3, -1).T
         new_S = new_sovle[3*temp_nodes[0].shape[0]:]
 
-        if id_B == 1:
+        if id_BDF == 1:
             temp_nodes = [new_nodes, temp_nodes[0]]
             temp_S = [new_S, temp_S[0]]
-        elif id_B == 2:
+        elif id_BDF == 2:
             temp_nodes = [new_nodes, temp_nodes[0], temp_nodes[1]]
             temp_S = [new_S, temp_S[0], temp_S[1]]
-        elif id_B == 3:
+        elif id_BDF == 3:
             temp_nodes = [new_nodes, temp_nodes[0], temp_nodes[1], temp_nodes[2]]
             temp_S = [new_S, temp_S[0], temp_S[1], temp_S[2]]
-        elif id_B == 4:
-            temp_nodes = [new_nodes, temp_nodes[0], temp_nodes[1], temp_nodes[2], temp_nodes[3]]
-            temp_S = [new_S, temp_S[0], temp_S[1], temp_S[2], temp_S[3]]
         return temp_nodes, temp_S
 
 
@@ -821,97 +720,105 @@ class Train_loop(object):
         self.plot_result = plot_result
 
     def train(self):
-        def MLS(self, nodes, elements):          
+        def MLS(self, nodes, elements):            
             grad_gamma_matrix = np.zeros((3, nodes.shape[0], nodes.shape[0]))
             lapalce_gamma_matrix = np.zeros((nodes.shape[0], nodes.shape[0]))
 
             if id_poly == 2:
+                coef_a = np.zeros((nodes.shape[0], 6))
                 kdtree = KDTree(nodes)
-                _, all_id_y = kdtree.query(nodes, k=self.Key_Para['id_node'])
-                all_nodes_local = nodes[all_id_y, :]
-                all_c_nodes = np.mean(all_nodes_local, axis=1)
-                all_nodes_minus = all_nodes_local - all_c_nodes[:, np.newaxis, :]
-                all_P = np.matmul(all_nodes_minus.transpose(0, 2, 1), all_nodes_minus)
-                all_eigen_value, all_eigen_vector = np.linalg.eigh(all_P)
-                sorted_indices = np.argsort(all_eigen_value, axis=1)[:, ::-1]
-                all_eigen_value_sort = np.take_along_axis(all_eigen_value, sorted_indices, axis=1)
-                all_eigenvector_sort = np.take_along_axis(all_eigen_vector, sorted_indices[:, np.newaxis, :], axis=2)
+                for i in range(nodes.shape[0]):
+                    # cur_nodes = nodes[i]
+                    # id_x, _ = np.where(elements==i)
+                    # sub_elements = elements[id_x, :]
+                    # id_y = np.unique(sub_elements.reshape(-1), axis=0)
+                    # nodes_local = nodes[id_y, :]
 
-                all_pro_nodes_local = np.matmul((all_nodes_local - nodes[:, np.newaxis, :]), all_eigenvector_sort)
-                all_pro_nodes_center = np.matmul((nodes - nodes)[:, np.newaxis, :], all_eigenvector_sort)
-                all_pro_nodes_minus = all_pro_nodes_local - all_pro_nodes_center
+                    cur_nodes = nodes[i]
+                    _, id_y = kdtree.query(cur_nodes, k=self.Key_Para['id_node'])
+                    nodes_local = nodes[id_y, :]
 
-                # special weight function
-                # weight = np.ones(nodes_local.shape[0]) / len(id_y)
-                # weight[np.where(np.linalg.norm(nodes_local - cur_nodes, axis=1) == 0)] = 1
+                    c_nodes = np.mean(nodes_local, axis=0)
+                    P = np.dot((nodes_local - c_nodes).T, (nodes_local - c_nodes))
+                    eigen_value, eigen_vector = np.linalg.eig(P)
+                    idx = np.flip(np.argsort(eigen_value))
+                    eigen_value = np.flip(np.sort(eigen_value))
+                    eigenvector_sort = eigen_vector[:, idx]
+                    
+                    
+                    pro_nodes_local = (nodes_local - cur_nodes) @ eigenvector_sort 
+                    pro_nodes_center = (cur_nodes - cur_nodes).reshape(1, -1) @ eigenvector_sort 
+                    pro_nodes_minus = pro_nodes_local - pro_nodes_center
 
-                # inverse of squared distance function
-                # epsilon = 1e-3
-                # weight = 1 / (np.linalg.norm(nodes_local - cur_nodes, axis=1)**2 + epsilon**2)
+                    # special weight function
+                    # weight = np.ones(nodes_local.shape[0]) / len(id_y)
+                    # weight[np.where(np.linalg.norm(nodes_local - cur_nodes, axis=1) == 0)] = 1
 
-                # Wendland function
-                all_d = np.linalg.norm((all_nodes_local - nodes[:, np.newaxis, :]), axis=2)
-                all_D = 1.1 * np.max(all_d, axis=1).reshape(-1, 1)
-                all_weight = (1 - all_d/all_D)**4 * (4*all_d/all_D + 1)
+                    # inverse of squared distance function
+                    # epsilon = 1e-3
+                    # weight = 1 / (np.linalg.norm(nodes_local - cur_nodes, axis=1)**2 + epsilon**2)
 
-                # 
-                # d = np.linalg.norm(nodes_local - cur_nodes, axis=1)
-                # D = 1.1 * np.max(d)
-                # weight = np.exp(-d**2 / (D**2))
+                    # Wendland function
+                    d = np.linalg.norm(nodes_local - cur_nodes, axis=1)
+                    D = 1.1 * np.max(d)
+                    weight = (1 - d/D)**4 * (4*d/D + 1)
 
-                all_b_x_k = np.concatenate([np.ones((all_pro_nodes_minus.shape[0], all_pro_nodes_minus.shape[1]))[:, np.newaxis, :], 
-                                            (all_pro_nodes_minus[:, :, 0])[:, np.newaxis, :], (all_pro_nodes_minus[:, :, 1])[:, np.newaxis, :], 
-                                            (all_pro_nodes_minus[:, :, 0])[:, np.newaxis, :]**2, (all_pro_nodes_minus[:, :, 0])[:, np.newaxis, :]*(all_pro_nodes_minus[:, :, 1])[:, np.newaxis, :], (all_pro_nodes_minus[:, :, 1])[:, np.newaxis, :]**2], axis=1)
-                all_w_k_b_k = all_b_x_k * all_weight[:, np.newaxis, :]
-                all_inv_item_left = np.linalg.inv(np.matmul(all_w_k_b_k, all_b_x_k.transpose(0, 2, 1)))
-
-                all_MLS_matrix = np.matmul(all_inv_item_left, all_w_k_b_k)
-                all_sub_f1 = all_pro_nodes_local[:, :, 2:]
-                all_coef_a = np.matmul(all_MLS_matrix, all_sub_f1).reshape(-1, 6)
-
-                all_z_x = all_coef_a[:, 1]
-                all_z_y = all_coef_a[:, 2]
-                all_z_xx = 2*all_coef_a[:, 3]
-                all_z_xy = all_coef_a[:, 4]
-                all_z_yy = 2*all_coef_a[:, 5]
-
-                all_g = 1 + all_z_x**2 + all_z_y**2
-                all_g_hat_11 = (1 + all_z_y**2) / all_g
-                all_g_hat_12 = -(all_z_x * all_z_y) / all_g
-                all_g_hat_21 = -(all_z_x * all_z_y) / all_g
-                all_g_hat_22 = (1 + all_z_x**2) / all_g
+                    # 
+                    # d = np.linalg.norm(nodes_local - cur_nodes, axis=1)
+                    # D = 1.1 * np.max(d)
+                    # weight = np.exp(-d**2 / (D**2))
 
 
-                all_G1 = np.hstack((np.zeros((all_g.shape[0], 1)), all_g_hat_11.reshape(-1, 1), all_g_hat_12.reshape(-1, 1), np.zeros((all_g.shape[0], 1)), np.zeros((all_g.shape[0], 1)), np.zeros((all_g.shape[0], 1))))
-                all_G2 = np.hstack((np.zeros((all_g.shape[0], 1)), all_g_hat_21.reshape(-1, 1), all_g_hat_22.reshape(-1, 1), np.zeros((all_g.shape[0], 1)), np.zeros((all_g.shape[0], 1)), np.zeros((all_g.shape[0], 1))))
-                all_temp = np.matmul((all_eigenvector_sort[:, :, 0] + all_coef_a[:, 1:2]*all_eigenvector_sort[:, :, 2])[:, :, np.newaxis], np.matmul(all_G1[:, np.newaxis, :], all_MLS_matrix)) + \
-                    np.matmul((all_eigenvector_sort[:, :, 1] + all_coef_a[:, 2:3]*all_eigenvector_sort[:, :, 2])[:, :, np.newaxis], np.matmul(all_G2[:, np.newaxis, :], all_MLS_matrix))
+                    b_x_k = np.vstack((np.ones((1, pro_nodes_minus.shape[0])), (pro_nodes_minus[:, 0]), (pro_nodes_minus[:, 1]), (pro_nodes_minus[:, 0])**2, (pro_nodes_minus[:, 0])*(pro_nodes_minus[:, 1]), (pro_nodes_minus[:, 1])**2))
+                    w_k_b_k = np.dot(b_x_k, np.diag(weight))
+                    inv_item_left = np.linalg.inv(w_k_b_k.dot(b_x_k.T))
+                    
+                    MLS_matrix = inv_item_left.dot(w_k_b_k)
+                    sub_f1 = pro_nodes_local[:, 2:]
+                    coef_a[i, :] = MLS_matrix.dot(sub_f1).reshape(-1)
+                    
+                    z_x = coef_a[i, 1]
+                    z_y = coef_a[i, 2]
+                    z_xx = 2*coef_a[i, 3]
+                    z_xy = coef_a[i, 4]
+                    z_yy = 2*coef_a[i, 5]
+                    
+                    g = 1 + z_x**2 + z_y**2
+                    g_hat_11 = (1 + z_y**2) / g
+                    g_hat_12 = -(z_x * z_y) / g
+                    g_hat_21 = -(z_x * z_y) / g
+                    g_hat_22 = (1 + z_x**2) / g
+                    
+                    G1 = np.vstack((0, g_hat_11, g_hat_12, 0, 0, 0)).T
+                    G2 = np.vstack((0, g_hat_21, g_hat_22, 0, 0, 0)).T
+                    temp = np.dot((eigenvector_sort[:, 0] + coef_a[i, 1:2]*eigenvector_sort[:, 2]).reshape(-1, 1), np.dot(G1, MLS_matrix)) + \
+                        np.dot((eigenvector_sort[:, 1] + coef_a[i, 2:3]*eigenvector_sort[:, 2]).reshape(-1, 1), np.dot(G2, MLS_matrix))
 
-                grad_gamma_matrix[0, np.arange(all_g.shape[0])[:, None], all_id_y] = all_temp[:, 0, :]
-                grad_gamma_matrix[1, np.arange(all_g.shape[0])[:, None], all_id_y] = all_temp[:, 1, :]
-                grad_gamma_matrix[2, np.arange(all_g.shape[0])[:, None], all_id_y] = all_temp[:, 2, :]
+                    
+                    grad_gamma_matrix[0, i, id_y] = temp[0, :]
+                    grad_gamma_matrix[1, i, id_y] = temp[1, :]
+                    grad_gamma_matrix[2, i, id_y] = temp[2, :]
+                    
+                    sqrt_g = np.sqrt(g)
+                    g_x = 2*z_x*z_xx + 2*z_y*z_xy
+                    g_y = 2*z_y*z_yy + 2*z_x*z_xy
+                    sqrt_g_x = 1/2 * (1/sqrt_g) * g_x 
+                    sqrt_g_y = 1/2 * (1/sqrt_g) * g_y
+                    g_hat_11_x = ((2*z_y*z_xy * g) - ((1 + z_y**2) * g_x)) / g**2
+                    g_hat_12_x = ((-(z_xx*z_y + z_x*z_xy) * g) - (-(z_x * z_y) * g_x)) / g**2
+                    g_hat_21_y = ((-(z_yy*z_x + z_y*z_xy) * g) - (-(z_x * z_y) * g_y)) / g**2
+                    g_hat_22_y = ((2*z_x*z_xy * g) - ((1 + z_x**2) * g_y)) / g**2
 
-                all_sqrt_g = np.sqrt(all_g)
-                all_g_x = 2*all_z_x*all_z_xx + 2*all_z_y*all_z_xy
-                all_g_y = 2*all_z_y*all_z_yy + 2*all_z_x*all_z_xy
-                all_sqrt_g_x = 1/2 * (1/all_sqrt_g) * all_g_x 
-                all_sqrt_g_y = 1/2 * (1/all_sqrt_g) * all_g_y
-                all_g_hat_11_x = ((2*all_z_y*all_z_xy * all_g) - ((1 + all_z_y**2) * all_g_x)) / all_g**2
-                all_g_hat_12_x = ((-(all_z_xx*all_z_y + all_z_x*all_z_xy) * all_g) - (-(all_z_x * all_z_y) * all_g_x)) / all_g**2
-                all_g_hat_21_y = ((-(all_z_yy*all_z_x + all_z_y*all_z_xy) * all_g) - (-(all_z_x * all_z_y) * all_g_y)) / all_g**2
-                all_g_hat_22_y = ((2*all_z_x*all_z_xy * all_g) - ((1 + all_z_x**2) * all_g_y)) / all_g**2
+                    A0 = 0
+                    A1 = (1/sqrt_g) * (sqrt_g_x * g_hat_11 + sqrt_g_y * g_hat_21) + (g_hat_11_x + g_hat_21_y)
+                    A2 = (1/sqrt_g) * (sqrt_g_x * g_hat_12 + sqrt_g_y * g_hat_22) + (g_hat_12_x + g_hat_22_y)
+                    A3 = g_hat_11
+                    A4 = g_hat_12 + g_hat_21
+                    A5 = g_hat_22
+                    A = np.vstack((A0, A1, A2, 2*A3, A4, 2*A5)).T
 
-                all_A0 = (np.zeros((all_g.shape[0]))).reshape(-1, 1)
-                all_A1 = ((1/all_sqrt_g) * (all_sqrt_g_x * all_g_hat_11 + all_sqrt_g_y * all_g_hat_21) + (all_g_hat_11_x + all_g_hat_21_y)).reshape(-1, 1)
-                all_A2 = ((1/all_sqrt_g) * (all_sqrt_g_x * all_g_hat_12 + all_sqrt_g_y * all_g_hat_22) + (all_g_hat_12_x + all_g_hat_22_y)).reshape(-1, 1)
-                all_A3 = (all_g_hat_11).reshape(-1, 1)
-                all_A4 = (all_g_hat_12 + all_g_hat_21).reshape(-1, 1)
-                all_A5 = (all_g_hat_22).reshape(-1, 1)
-
-                all_A = np.hstack((all_A0, all_A1, all_A2, 2*all_A3, all_A4, 2*all_A5))
-
-                temp = np.matmul(all_A[:, np.newaxis, :], all_MLS_matrix).reshape(-1, self.Key_Para['id_node'])
-                lapalce_gamma_matrix[np.arange(all_g.shape[0])[:, None], all_id_y] = temp
+                    temp = np.dot(A, MLS_matrix)
+                    lapalce_gamma_matrix[i, id_y] = temp[0, :]
             elif id_poly == 3:
                 coef_a = np.zeros((nodes.shape[0], 10))
                 kdtree = KDTree(nodes)
@@ -1092,111 +999,155 @@ class Train_loop(object):
             self.Key_Para['A_coef_laplce'] = A_coef_laplce
 
 
+        def Estimated_density(self, nodes, elements):
+            def triangle_area_3d(p0, p1, p2):
+                vec1 = p1 - p0
+                vec2 = p2 - p0
+                cross = np.cross(vec1, vec2)
+                return 0.5 * np.linalg.norm(cross)
+
+            def total_area_around_center(center, neighbors):
+                n = neighbors.shape[0]
+                total_area = 0.0
+                for i in range(n):
+                    p1 = neighbors[i]
+                    p2 = neighbors[(i + 1) % n]
+                    area = triangle_area_3d(center, p1, p2)
+                    total_area += area
+                return total_area
+            
+            rho = np.zeros((nodes.shape[0], 1))
+            kdtree = KDTree(nodes)
+            for i in range(nodes.shape[0]):
+                # cur_nodes = nodes[i]
+                # id_x, _ = np.where(elements==i)
+                # sub_elements = elements[id_x, :]
+                # id_y = np.unique(sub_elements.reshape(-1), axis=0)
+                # nodes_local = nodes[id_y, :]
+                cur_nodes = nodes[i]
+                _, id_y = kdtree.query(cur_nodes, k=10)
+                nodes_local = nodes[id_y, :]
+
+                neighbors = nodes[np.setdiff1d(id_y, i), :]
+                area = total_area_around_center(cur_nodes, neighbors)
+                rho[i] = 1 / area
+            
+            rho = rho / np.sum(rho)
+            return rho
+
+
 
         t, nodes, elements = self.gen_Nodes.forward()
+        rho_0 = np.ones((nodes.shape[0], 1))
         self.gen_Nodes.oprater_nodes(nodes, elements)
         rho_0 = 1 / self.Key_Para['nodes_area']
-        if self.Key_Para['type_surface'] == 'Torus' or self.Key_Para['type_surface'] == 'Sphere':
+        if self.Key_Para['type_surface'] == 'Torus':
             rho_0 = np.ones((nodes.shape[0], 1))
         
         nodes_all = np.zeros((t.shape[0], nodes.shape[0], nodes.shape[1]))
+        v_all = np.zeros((t.shape[0], nodes.shape[0], nodes.shape[1]))
         rho_all = np.zeros((t.shape[0], nodes.shape[0]))
         S_all = np.zeros((t.shape[0], nodes.shape[0]))
         nodes_all[0, :, :] = nodes
         rho_all[0, :] = rho_0.reshape(-1)
         S_all[0, :] = np.log(rho_0.reshape(-1))
         cur_dt = 0
-        for dt_i in range(t.shape[0]-1):
-            if dt_i == 0:
+
+        file_path_nodes = '20250614-1732-GF_MSL_GTV_Impove-mesh2_BDF2_P2_Nt-10000_Ns-5606_eta-100_copy/' + 'nodes_all.npy'
+        nodes_all = np.load(file_path_nodes)
+        file_path_nodes = '20250614-1732-GF_MSL_GTV_Impove-mesh2_BDF2_P2_Nt-10000_Ns-5606_eta-100_copy/' + 'S_all.npy'
+        S_all = np.load(file_path_nodes)
+        # nodes_all[0:10001, :, :] = nodes_all1[0:10001, :, :]
+        # S_all[0:10001, :] = S_all1[0:10001, :]
+
+        id_begin = 6000
+        for dt_i in range(id_begin, t.shape[0]-1):
+            if dt_i == id_begin:
                 w = 1
-                self.plot_result.plot_rho(t, nodes, elements, rho_0, 0)
-                self.plot_result.plot_S(t, nodes, elements, S_all[0, :], 0)
-                self.plot_result.plot_surface(t, nodes, elements, 0)
-                # self.gen_Nodes.Save_vtk(nodes, elements, 0)
+                self.plot_result.plot_rho(t, nodes_all[id_begin, :, :], elements, np.exp(S_all[id_begin, :]), id_begin)
+                self.plot_result.plot_S(t, nodes_all[id_begin, :, :], elements, S_all[id_begin, :], id_begin)
+                self.plot_result.plot_surface(t, nodes_all[id_begin, :, :], elements, id_begin)
+
             
             self.Key_Para['dt_i'] = dt_i
             dt = t[dt_i+1] - t[dt_i]
             cur_dt = cur_dt + dt
             print('cur_dt: %.10f' %cur_dt)
 
-            if self.Key_Para['id_BDF'] == 1:
+            id_BDF = self.Key_Para['id_BDF']
+            if id_BDF == 1:
                 if dt_i == 0:
                     temp_nodes = [nodes_all[0, :]]
                     temp_S = [S_all[0, :]]
-                    extrapola_nodes = temp_nodes
                     MLS(self, temp_nodes[0], elements)
-                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, extrapola_nodes, temp_S, 1)
+                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=1)
                 else:
-                    extrapola_nodes = temp_nodes
                     MLS(self, temp_nodes[0], elements)
-                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, extrapola_nodes, temp_S, 1)
+                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=1)
 
                 rho = np.exp(temp_S[0])
                 nodes_all[(dt_i+1), :, :] = temp_nodes[0]
                 S_all[(dt_i+1), :] = temp_S[0]
                 rho_all[(dt_i+1), :] = rho.reshape(-1)
                 print('rho_raito: %.10f' %(rho.max()/rho.min()))
-            elif self.Key_Para['id_BDF'] == 2:
+            elif id_BDF == 2:
                 if dt_i == 0:
                     temp_nodes = [nodes_all[0, :]]
                     temp_S = [S_all[0, :]]
-                    extrapola_nodes = temp_nodes
                     MLS(self, temp_nodes[0], elements)
-                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, extrapola_nodes, temp_S, 1)
+                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=1)
                 else:
-                    if dt_i == 1:
-                        temp_nodes = [nodes_all[1, :], nodes_all[0, :]]
-                        temp_S = [S_all[1, :], S_all[0, :]]
+                    if dt_i == id_begin:
+                        temp_nodes = [nodes_all[id_begin, :], nodes_all[id_begin-1, :]]
+                        temp_S = [S_all[id_begin, :], S_all[id_begin-1, :]]
                     # MLS(self, temp_nodes[0], elements)
-                    # extrapola_nodes, _ = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, extrapola_nodes, temp_S, 1)
+                    # extrapola_nodes, _ = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=1)
                     extrapola_nodes = [2*temp_nodes[0] - temp_nodes[1]]
                     MLS(self, extrapola_nodes[0], elements)
-                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, extrapola_nodes, temp_S, 2)
+                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=2)
 
+
+                id_end = temp_S[0].max() / temp_S[0].min()
+                print('id_end:', id_end)
                 rho = np.exp(temp_S[0])
                 nodes_all[(dt_i+1), :, :] = temp_nodes[0]
                 S_all[(dt_i+1), :] = temp_S[0]
                 rho_all[(dt_i+1), :] = rho.reshape(-1)
                 print('rho_raito: %.10f' %(rho.max()/rho.min()))
-            elif self.Key_Para['id_BDF'] == 3:
+
+
+            elif id_BDF == 3:
                 if dt_i == 0:
-                    temp_nodes = [nodes_all[0, :]]
-                    temp_S = [S_all[0, :]]
-                    # extrapola_nodes = temp_nodes
-                    # MLS(self, temp_nodes[0], elements)
-                    # temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, extrapola_nodes, temp_S, 1)
+                    temp_nodes = [nodes_all[0, :], 0]
+                    temp_S = [S_all[0, :], 0]
                     new_dt = dt**2
                     temp_dt = 0 + new_dt
-                    for _ in range(math.ceil(dt/new_dt)):
-                        print('--temp_dt: %.10f' %temp_dt)
-                        extrapola_nodes = temp_nodes
+                    for _ in range(int(dt/new_dt)):
                         MLS(self, temp_nodes[0], elements)
-                        temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, temp_dt, new_dt, temp_nodes, extrapola_nodes, temp_S, 1)
+                        temp_nodes, temp_S = self.solver.nodes_rho_solver(temp_dt, new_dt, temp_nodes, temp_S, id_BDF=1)
                         temp_dt = temp_dt + new_dt
                 elif dt_i == 1:
                     temp_nodes = [nodes_all[1, :], nodes_all[0, :]]
                     temp_S = [S_all[1, :], S_all[0, :]]
-                    # MLS(self, temp_nodes[0], elements)
-                    # extrapola_nodes, _ = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, extrapola_nodes, temp_S, 1)
-                    extrapola_nodes = [2*temp_nodes[0] - temp_nodes[1]]
+                    # extrapola_nodes = [2*temp_nodes[0] - temp_nodes[1]]
+                    extrapola_nodes, _ = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=1)
                     MLS(self, extrapola_nodes[0], elements)
-                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, extrapola_nodes, temp_S, 2) 
+                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=2) 
                 else:
                     if dt_i == 2:
                         temp_nodes = [nodes_all[2, :], nodes_all[1, :], nodes_all[0, :]]
                         temp_S = [S_all[2, :], S_all[1, :], S_all[0, :]]
-                    # MLS(self, temp_nodes[0], elements)
-                    # extrapola_nodes, _ = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, extrapola_nodes, temp_S, 2)
-                    extrapola_nodes = [3*temp_nodes[0] - 3*temp_nodes[1] + temp_nodes[2]]
+                    # extrapola_nodes = [3*temp_nodes[0] - 3*temp_nodes[1] + temp_nodes[2]]
+                    extrapola_nodes, _ = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=2)
                     MLS(self, extrapola_nodes[0], elements)
-                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, extrapola_nodes, temp_S, 3)
+                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=3)
 
                 rho = np.exp(temp_S[0])
                 nodes_all[(dt_i+1), :, :] = temp_nodes[0]
                 S_all[(dt_i+1), :] = temp_S[0]
                 rho_all[(dt_i+1), :] = rho.reshape(-1)
                 print('rho_raito: %.10f' %(rho.max()/rho.min()))
-            elif self.Key_Para['id_BDF'] == 4:
+            elif id_BDF == 4:
                 if dt_i == 0:
                     temp_nodes = [nodes_all[0, :]]
                     temp_S = [S_all[0, :]]
@@ -1204,33 +1155,30 @@ class Train_loop(object):
                     temp_dt = 0 + new_dt
                     for _ in range(int(dt/new_dt)):
                         MLS(self, temp_nodes[0], elements)
-                        temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, 1)
+                        temp_nodes, temp_S = self.solver.nodes_rho_solver(temp_dt, new_dt, temp_nodes, temp_S, id_BDF=1)
                         temp_dt = temp_dt + new_dt
                 elif dt_i == 1:
                     temp_nodes = [nodes_all[1, :], nodes_all[0, :]]
                     temp_S = [S_all[1, :], S_all[0, :]]
                     # extrapola_nodes = [2*temp_nodes[0] - temp_nodes[1]]
-                    MLS(self, temp_nodes[0], elements)
-                    extrapola_nodes, _ = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, 1)
+                    extrapola_nodes, _ = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=1)
                     MLS(self, extrapola_nodes[0], elements)
-                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, 2) 
+                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=2) 
                 elif dt_i == 2:
                     temp_nodes = [nodes_all[2, :], nodes_all[1, :], nodes_all[0, :]]
                     temp_S = [S_all[2, :], S_all[1, :], S_all[0, :]]
                     # extrapola_nodes = [3*temp_nodes[0] - 3*temp_nodes[1] + temp_nodes[2]]
-                    MLS(self, temp_nodes[0], elements)
-                    extrapola_nodes, _ = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, 2)
+                    extrapola_nodes, _ = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=2)
                     MLS(self, extrapola_nodes[0], elements)
-                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, 3)
+                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=3)
                 else:
                     if dt_i == 3:
                         temp_nodes = [nodes_all[3, :], nodes_all[2, :], nodes_all[1, :], nodes_all[0, :]]
                         temp_S = [S_all[3, :], S_all[2, :], S_all[1, :], S_all[0, :]]
                     # extrapola_nodes = [4*temp_nodes[0] - 6*temp_nodes[1] + 4*temp_nodes[2] - temp_nodes[3]]
-                    MLS(self, temp_nodes[0], elements)
-                    extrapola_nodes, _ = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, 3)
+                    extrapola_nodes, _ = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=3)
                     MLS(self, extrapola_nodes[0], elements)
-                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, 4)
+                    temp_nodes, temp_S = self.solver.nodes_rho_solver(elements, cur_dt, dt, temp_nodes, temp_S, id_BDF=4)
 
                 rho = np.exp(temp_S[0])
                 nodes_all[(dt_i+1), :, :] = temp_nodes[0]
@@ -1246,10 +1194,6 @@ class Train_loop(object):
                 self.plot_result.plot_surface(t, temp_nodes[0], elements, self.Key_Para['dt_i']+1)
 
 
-            if (self.Key_Para['type_surface'] == 'New_Peanut' or self.Key_Para['type_surface'] == 'Sphere3') and dt_i == 6010:
-                break
-
-
 
             np.save(self.Key_Para['File_name'] + '/' + 'nodes_all.npy', nodes_all)
             np.save(self.Key_Para['File_name'] + '/' + 'rho_all.npy', rho_all)
@@ -1257,11 +1201,17 @@ class Train_loop(object):
             np.save(self.Key_Para['File_name'] + '/' + 'elements.npy', elements)
 
 
+            if id_end-1 <= 1e-5:
+                print(dt_i)
+                self.plot_result.plot_rho(t, temp_nodes[0], elements, rho, self.Key_Para['dt_i']+1)
+                self.plot_result.plot_S(t, temp_nodes[0], elements, temp_S[0], self.Key_Para['dt_i']+1)
+                self.plot_result.plot_surface(t, temp_nodes[0], elements, self.Key_Para['dt_i']+1)
+                break
+
         if self.Key_Para['type_surface'] == 'Sphere':
             r = np.abs(np.linalg.norm(nodes_all[-1, :], axis=1).max() - (1/(1 + np.exp(-self.Key_Para['Time'][0, 1]))))
             print('r: %.20f' %r)
         return nodes_all, rho_all
-
 
 
 def main(Key_Para):
@@ -1291,13 +1241,13 @@ if __name__== "__main__" :
         Dim_time = 1
         Dim_space = 3
         Num_Nodes_t = 1280   # 80 160 320 640 1280
-        Num_Nodes_s = 30054  # 54 96 192 270 390 1806 2904 7446 11406 30054 46710 61200 120390
+        Num_Nodes_s = 61200  # 54 96 192 270 390 1806 2904 7446 11406 30054 46710 61200 120390
         Time = [0.0, 1.0]
         eta = 100
 
-        id_BDF = 3
+        id_BDF = 2
         id_poly = 2
-        id_node = 10
+        id_node = 15
 
         type_print = 'False'           # 'True'      'False' 
         type_surface = 'Sphere'  
@@ -1310,7 +1260,7 @@ if __name__== "__main__" :
         Num_Nodes_t = 100
         Num_Nodes_s = 65536    # 256 1024 4096 16384 65536
         Time = [0.0, (1/10000)]
-        eta = 1
+        eta = 100
 
         id_poly = 2
         id_BDF = 2
@@ -1325,9 +1275,9 @@ if __name__== "__main__" :
     elif test == 'Impove-mesh1':
         Dim_time = 1
         Dim_space = 3
-        Num_Nodes_t = 10000
+        Num_Nodes_t = 20000
         Num_Nodes_s = 2904    # 54 96 192 270 390 1806 2904 7446 11406 30054 46710 61200 120390
-        Time = [0.0, 5.0]
+        Time = [0.0, 10.0]
         eta = 100
 
 
@@ -1346,8 +1296,8 @@ if __name__== "__main__" :
         Num_Nodes_t = 10000
         Num_Nodes_s = 5606      # 1390  2472 5606 8686 11480 15566 22414
         Time = [0.0, 1.0]
-        eta = 1
-        
+        eta = 100
+
         id_poly = 2
         id_BDF = 2
         id_node = 15
@@ -1399,6 +1349,8 @@ if __name__== "__main__" :
 
 
     File_name = File_name + '_' + test + '_BDF' + str(id_BDF) + '_P' + str(id_poly) + '_Nt-' + str(Num_Nodes_t) + '_Ns-' + str(Num_Nodes_s) + '_eta-' + str(eta)
+    
+    File_name = '20250614-1732-GF_MSL_GTV_Impove-mesh2_BDF2_P2_Nt-10000_Ns-5606_eta-100_copy'
     Key_Parameters = {
         'test': test,
         'File_name': File_name,

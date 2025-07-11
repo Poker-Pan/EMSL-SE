@@ -89,7 +89,7 @@ class Gnerate_node(object):
             if type_surface == 'Dumbbell_combine':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -98,7 +98,7 @@ class Gnerate_node(object):
             elif type_surface == 'Dumbbell_split':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -107,8 +107,8 @@ class Gnerate_node(object):
             elif type_surface == 'Torus':
                 file_name = type_surface
 
-                nodes_space = np.load('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.npy')
-                elements = np.load('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '_elements.npy')
+                nodes_space = np.load('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.npy')
+                elements = np.load('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '_elements.npy')
                 elements = elements
                 normal = nodes_space #load_data['normal']
                 self.Key_Para['nodes_center'] = np.array([0.5, 0.5, 0.5])
@@ -116,8 +116,8 @@ class Gnerate_node(object):
             elif type_surface == 'New_Torus':
                 file_name = type_surface
 
-                nodes_space = np.load('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.npy')
-                elements = np.load('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '_elements.npy')
+                nodes_space = np.load('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.npy')
+                elements = np.load('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '_elements.npy')
                 elements = elements
                 normal = nodes_space #load_data['normal']
                 self.Key_Para['nodes_center'] = np.array([0.5, 0.5, 0.5])

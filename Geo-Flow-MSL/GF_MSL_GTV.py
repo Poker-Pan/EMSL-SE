@@ -90,7 +90,7 @@ class Gnerate_node(object):
             if type_surface == 'Sphere':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes'] / 2
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -99,7 +99,7 @@ class Gnerate_node(object):
             elif type_surface == 'Sphere1':
                 file_name = 'Sphere'
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes'] / 2 + 0.25
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -108,7 +108,7 @@ class Gnerate_node(object):
             elif type_surface == 'Sphere2':
                 file_name = 'Sphere'
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes'] / 2
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -117,7 +117,7 @@ class Gnerate_node(object):
             elif type_surface == 'Sphere3':
                 file_name = 'Sphere'
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -128,7 +128,7 @@ class Gnerate_node(object):
             elif type_surface == 'Peanut':
                 file_name = 'Peanut'
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -137,10 +137,10 @@ class Gnerate_node(object):
             elif type_surface == 'Torus':
                 file_name = type_surface
 
-                # load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                # load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 # nodes_space = load_data['nodes']
-                nodes_space = np.load('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.npy')
-                elements = np.load('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '_elements.npy')
+                nodes_space = np.load('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.npy')
+                elements = np.load('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '_elements.npy')
                 elements = elements
                 normal = nodes_space #load_data['normal']
                 self.Key_Para['nodes_center'] = np.array([0.5, 0.5, 0.5])
@@ -148,7 +148,7 @@ class Gnerate_node(object):
             elif type_surface == 'Opener':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -157,7 +157,7 @@ class Gnerate_node(object):
             elif type_surface == 'Ellipsoid':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -166,7 +166,7 @@ class Gnerate_node(object):
             elif type_surface == 'Ellipsoid1':
                 file_name = 'Ellipsoid'
 
-                load_data = np.load('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_n_' + str(self.Key_Para['Num_Nodes_s']) + '.npy')
+                load_data = np.load('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_n_' + str(self.Key_Para['Num_Nodes_s']) + '.npy')
                 nodes_space = load_data
                 elements = nodes_space
                 normal = nodes_space
@@ -176,7 +176,7 @@ class Gnerate_node(object):
             elif type_surface == 'cow':
                 file_name = type_surface
 
-                load_data = trimesh.load('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.obj')
+                load_data = trimesh.load('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.obj')
                 nodes_space = np.array(load_data.vertices[:, [0, 2, 1]])
                 nodes_space = nodes_space
                 elements = load_data.faces
@@ -185,7 +185,7 @@ class Gnerate_node(object):
             elif type_surface == 'armadillo':
                 file_name = type_surface
 
-                load_data = trimesh.load('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.obj')
+                load_data = trimesh.load('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.obj')
                 nodes_space = np.array(load_data.vertices[:, [0, 2, 1]])
                 elements = load_data.faces
                 normal = np.array(load_data.vertex_normals[:, [0, 2, 1]])
@@ -193,7 +193,7 @@ class Gnerate_node(object):
             elif type_surface == 'face':
                 file_name = type_surface
 
-                load_data = trimesh.load('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.obj')
+                load_data = trimesh.load('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.obj')
                 nodes_space = np.array(load_data.vertices)
                 elements = load_data.faces
                 normal = np.array(load_data.vertex_normals)
@@ -201,7 +201,7 @@ class Gnerate_node(object):
             elif type_surface == 'Airplane':
                 file_name = type_surface
 
-                load_data = trimesh.load('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.obj')
+                load_data = trimesh.load('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.obj')
                 nodes_space = np.array(load_data.vertices)
                 nodes_space = nodes_space
                 elements = load_data.faces
@@ -210,7 +210,7 @@ class Gnerate_node(object):
             elif type_surface == 'fish':
                 file_name = type_surface
 
-                load_data = trimesh.load('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.obj')
+                load_data = trimesh.load('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.obj')
                 nodes_space = np.array(load_data.vertices)
                 nodes_space = (nodes_space + 1) / 2
                 elements = load_data.faces
@@ -219,7 +219,7 @@ class Gnerate_node(object):
             elif type_surface == 'blub':
                 file_name = type_surface
 
-                load_data = trimesh.load('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.obj')
+                load_data = trimesh.load('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.obj')
                 nodes_space = np.array(load_data.vertices)
                 nodes_space = nodes_space
                 elements = load_data.faces
@@ -228,7 +228,7 @@ class Gnerate_node(object):
             elif type_surface == 'Dumbbell_Sphere':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -237,7 +237,7 @@ class Gnerate_node(object):
             elif type_surface == 'Dumbbell_Singular':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface/' + file_name + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface/' + file_name + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -246,7 +246,7 @@ class Gnerate_node(object):
             elif type_surface == 'New_Peanut':
                 file_name = type_surface
 
-                load_data = scio.loadmat('./Geo-Flow-RBF/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
+                load_data = scio.loadmat('./Geo-Flow-MSL/Data_Set/surface_new/' + file_name + '_' + str(self.Key_Para['Num_Nodes_s']) + '.mat')
                 nodes_space = load_data['nodes']
                 elements = (load_data['triangles'] - 1).astype(int)
                 normal = load_data['normal']
@@ -378,6 +378,125 @@ class Solver(object):
     
     def nodes_rho_solver(self, elements, cur_dt, dt, temp_nodes, extrapola_nodes, temp_S, id_B):
         v_exact = np.zeros_like(temp_nodes[0])
+        if self.Key_Para['type_surface'] == 'New_Peanut':
+            def V_exact(self, t, nodes):
+                a = 0.1 + 0.05*np.sin(2*np.pi*t)
+                a_t = 0.05*2*np.pi*np.cos(2*np.pi*t)
+                L = 1 + 0.2*np.sin(4*np.pi*t)
+                L_t = 0.2*4*np.pi*np.cos(4*np.pi*t)
+                s = nodes[:, 2]**2 / L**2
+                s_t = (-2*nodes[:, 2]**2 / L**3) * L_t
+                s_z = 2*nodes[:, 2] / L**2
+                
+                phi_t = (-2*nodes[:, 0]**2 / a**3) * a_t + (-2*nodes[:, 1]**2 / a**3) * a_t + 400*s*s_t - 199*s_t
+                phi_x = (2*nodes[:, 0] / a**2)
+                phi_y = (2*nodes[:, 1] / a**2)
+                phi_z = 400*s*s_z - 199*s_z
+                phi_grad = np.array([phi_x, phi_y, phi_z]).T
+                phi_grad_norm = np.linalg.norm(phi_grad, axis=1)
+                v = -(np.dot(np.diag(phi_t), phi_grad)) / (phi_grad_norm.reshape(-1, 1)**2)
+                return v
+
+            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
+        elif self.Key_Para['type_surface'] == 'Sphere':
+            def V_exact(self, t, nodes):
+                v = np.zeros_like(nodes)
+                r = np.linalg.norm(nodes, axis=1)
+                v[:, 0] = nodes[:, 0]*(1 - r)
+                v[:, 1] = nodes[:, 1]*(1 - r)
+                v[:, 2] = nodes[:, 2]*(1 - r)
+                return v
+
+            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
+        elif self.Key_Para['type_surface'] == 'Sphere1':
+            def V_exact(self, t, nodes):
+                v = np.zeros_like(nodes)
+                r = np.linalg.norm(nodes, axis=1)
+                v[:, 0] = nodes[:, 0]*(1 - r)
+                v[:, 1] = nodes[:, 1]*(1 - r)
+                v[:, 2] = nodes[:, 2]*(1 - r)
+                return v
+
+            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
+        elif self.Key_Para['type_surface'] == 'Sphere3':
+            def V_exact(self, t, nodes):
+                a = 0.1 + 0.05*np.sin(2*np.pi*t)
+                a_t = 0.05*2*np.pi*np.cos(2*np.pi*t)
+                L = 1 + 0.2*np.sin(4*np.pi*t)
+                L_t = 0.2*4*np.pi*np.cos(4*np.pi*t)
+                s = nodes[:, 2]**2 / L**2
+                s_t = (-2*nodes[:, 2]**2 / L**3) * L_t
+                s_z = 2*nodes[:, 2] / L**2
+                
+                phi_t = (-2*nodes[:, 0]**2 / a**3) * a_t + (-2*nodes[:, 1]**2 / a**3) * a_t + 400*s*s_t - 199*s_t
+                phi_x = (2*nodes[:, 0] / a**2)
+                phi_y = (2*nodes[:, 1] / a**2)
+                phi_z = 400*s*s_z - 199*s_z
+                phi_grad = np.array([phi_x, phi_y, phi_z]).T
+                phi_grad_norm = np.linalg.norm(phi_grad, axis=1)
+                v = -(np.dot(np.diag(phi_t), phi_grad)) / (phi_grad_norm.reshape(-1, 1)**2)
+                return v
+
+            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
+        elif self.Key_Para['type_surface'] == 'Sphere':
+            def V_exact(self, t, nodes):
+                v = np.zeros_like(nodes)
+                r = np.linalg.norm(nodes, axis=1)
+                v[:, 0] = nodes[:, 0]*(1 - r)
+                v[:, 1] = nodes[:, 1]*(1 - r)
+                v[:, 2] = nodes[:, 2]*(1 - r)
+                return v
+
+            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
+        elif self.Key_Para['type_surface'] == 'Torus':
+            def V_exact1(self, t, nodes):
+                v = np.zeros_like(nodes)
+                r = np.linalg.norm(nodes, axis=1)
+                v[:, 0] = nodes[:, 0]*(1 - r)
+                v[:, 1] = nodes[:, 1]*(1 - r)
+                v[:, 2] = nodes[:, 2]*(1 - r)
+                return v
+
+            def V_exact2(self, t, nodes):
+                v = np.zeros_like(nodes)
+                r = np.linalg.norm(nodes, axis=1)
+                v[:, 0] = 3000*(nodes[:, 0]+0.5)*(r - 1)
+                v[:, 1] = 2000*(nodes[:, 1]+0.5)*(r - 1)
+                v[:, 2] = 1000*(nodes[:, 2]+0.5)*(r - 1)
+                return v
+            
+            def V_exact(self, t, nodes):
+                v = np.zeros_like(nodes)
+                r = np.linalg.norm(nodes, axis=1)
+                v[:, 0] = 500*np.cos(np.pi*nodes[:, 0])*np.sin(np.pi*nodes[:, 1])*np.sin(np.pi*nodes[:, 2])
+                v[:, 1] = 500*np.sin(np.pi*nodes[:, 0])*np.cos(np.pi*nodes[:, 1])*np.sin(np.pi*nodes[:, 2])
+                v[:, 2] = 500*np.sin(np.pi*nodes[:, 0])*np.sin(np.pi*nodes[:, 1])*np.cos(np.pi*nodes[:, 2])
+                return v
+            
+            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
+        elif self.Key_Para['type_surface'] == 'Peanut':
+            def V_exact(self, t, nodes):
+                a = 0.1 + 0.05*np.sin(2*np.pi*t)
+                a_t = 0.05*2*np.pi*np.cos(2*np.pi*t)
+                L = 1 + 0.05*np.sin(4*np.pi*t)
+                L_t = 0.05*4*np.pi*np.cos(4*np.pi*t)
+                s = nodes[:, 2]**2 / L**2
+                s_t = (-2*nodes[:, 2]**2 / L**3) * L_t
+                s_z = 2*nodes[:, 2] / L**2
+                
+                phi_t = (-2*nodes[:, 0]**2 / a**3) * a_t + (-2*nodes[:, 1]**2 / a**3) * a_t + 400*s*s_t - 199*s_t
+                phi_x = (2*nodes[:, 0] / a**2)
+                phi_y = (2*nodes[:, 1] / a**2)
+                phi_z = 400*s*s_z - 199*s_z
+                phi_grad = np.array([phi_x, phi_y, phi_z]).T
+                phi_grad_norm = np.linalg.norm(phi_grad, axis=1)
+                v = -(np.dot(np.diag(phi_t), phi_grad)) / (phi_grad_norm.reshape(-1, 1)**2)
+                return v
+
+
+            v_exact = V_exact(self, cur_dt, extrapola_nodes[0])
+
+
         l0 = scipy.sparse.diags(np.zeros(temp_nodes[0].shape[0]), 0)
         l1 = scipy.sparse.diags(np.ones(temp_nodes[0].shape[0]), 0)
         l2 = self.Key_Para['A_coef_laplce']
@@ -412,21 +531,12 @@ class Solver(object):
         r22 = v_exact[:, 1]
         r33 = v_exact[:, 2]
         r44 = l3.dot(v_exact[:, 0]) + l4.dot(v_exact[:, 1]) + l5.dot(v_exact[:, 2])
-
-
-        p = np.exp(6*(np.abs(np.cos(temp_nodes[0][:, 2])) + 1))
-        # p = np.exp(6*(np.abs(np.sin(temp_nodes[0][:, 2])) + 1))
-        log_p = np.log(p)
-        r111 = l3.dot(log_p)
-        r222 = l4.dot(log_p)
-        r333 = l5.dot(log_p)
-        r444 = l2.dot(log_p)
         
         Full_A = scipy.sparse.vstack((scipy.sparse.hstack((a*(1/dt)*l1, l0, l0, self.Key_Para['eta']*l3)), 
                                       scipy.sparse.hstack((l0, a*(1/dt)*l1, l0, self.Key_Para['eta']*l4)), 
                                       scipy.sparse.hstack((l0, l0, a*(1/dt)*l1, self.Key_Para['eta']*l5)),
                                       scipy.sparse.hstack((l0, l0, l0, a*(1/dt)*l1 - self.Key_Para['eta']*l2)))).tocsr()
-        Full_b = np.hstack(((1/dt)*r1 + r11 + self.Key_Para['eta']*r111, (1/dt)*r2 + r22 + self.Key_Para['eta']*r222, (1/dt)*r3 + r33+ self.Key_Para['eta']*r333, (1/dt)*r4 - r44 - self.Key_Para['eta']*r444))
+        Full_b = np.hstack(((1/dt)*r1 + r11, (1/dt)*r2 + r22, (1/dt)*r3 + r33, (1/dt)*r4 - r44))
         new_sovle = scipy.sparse.linalg.spsolve(Full_A, Full_b)
         new_nodes = new_sovle[0:3*temp_nodes[0].shape[0]].reshape(3, -1).T
         new_S = new_sovle[3*temp_nodes[0].shape[0]:]
@@ -518,17 +628,8 @@ class Plot_result(object):
                 ax.xaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
                 ax.yaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
                 ax.zaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
-            elif self.Key_Para['type_surface'] == 'Ellipsoid':
-                ax.view_init(elev=10, azim=5)
-                ax.set_xlim3d(-1, 1), ax.set_ylim3d(-1, 1), ax.set_zlim3d(-1, 1)
-                ax.set_xticks([]),  ax.set_yticks([]), ax.set_zticks([])
-                ax.axis('off')
-                ax.grid(None)
-                ax.xaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
-                ax.yaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
-                ax.zaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
             
-            ax.set_box_aspect([7, 7, 10])
+            ax.set_box_aspect([1, 1, 1])
             
             cb = fig.colorbar(surf, ax=[ax])
             cb.set_ticks(np.linspace(surf.norm.vmin, surf.norm.vmax, num=5))
@@ -604,16 +705,8 @@ class Plot_result(object):
                 ax.xaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
                 ax.yaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
                 ax.zaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
-            elif self.Key_Para['type_surface'] == 'Ellipsoid':
-                ax.view_init(elev=10, azim=5)
-                ax.set_xlim3d(-1, 1), ax.set_ylim3d(-1, 1), ax.set_zlim3d(-1, 1)
-                ax.set_xticks([]),  ax.set_yticks([]), ax.set_zticks([])
-                ax.axis('off')
-                ax.grid(None)
-                ax.xaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
-                ax.yaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
-                ax.zaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
-            ax.set_box_aspect([7, 7, 10])
+            
+            ax.set_box_aspect([1, 1, 1])
             
             cb = fig.colorbar(surf, ax=[ax])
             cb.set_ticks(np.linspace(surf.norm.vmin, surf.norm.vmax, num=5))
@@ -682,16 +775,7 @@ class Plot_result(object):
                 ax.xaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
                 ax.yaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
                 ax.zaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
-            elif self.Key_Para['type_surface'] == 'Ellipsoid':
-                ax.view_init(elev=10, azim=5)
-                ax.set_xlim3d(-1, 1), ax.set_ylim3d(-1, 1), ax.set_zlim3d(-1, 1)
-                ax.set_xticks([]),  ax.set_yticks([]), ax.set_zticks([])
-                ax.axis('off')
-                ax.grid(None)
-                ax.xaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
-                ax.yaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
-                ax.zaxis.set_pane_color((1.0, 1.0, 1.0, 1.0))
-            ax.set_box_aspect([7, 7, 10])
+            ax.set_box_aspect([1, 1, 1])
             # plt.title('t=%1.3f' %(t))
 
 
@@ -1162,14 +1246,16 @@ class Train_loop(object):
                 self.plot_result.plot_surface(t, temp_nodes[0], elements, self.Key_Para['dt_i']+1)
 
 
+            if (self.Key_Para['type_surface'] == 'New_Peanut' or self.Key_Para['type_surface'] == 'Sphere3') and dt_i == 6010:
+                break
+
+
 
             np.save(self.Key_Para['File_name'] + '/' + 'nodes_all.npy', nodes_all)
             np.save(self.Key_Para['File_name'] + '/' + 'rho_all.npy', rho_all)
             np.save(self.Key_Para['File_name'] + '/' + 'S_all.npy', S_all)
             np.save(self.Key_Para['File_name'] + '/' + 'elements.npy', elements)
 
-            if dt_i == 1001 and (self.Key_Para['type_surface'] == 'New_Peanut' or self.Key_Para['type_surface'] == 'Ellipsoid'):
-                break
 
         if self.Key_Para['type_surface'] == 'Sphere':
             r = np.abs(np.linalg.norm(nodes_all[-1, :], axis=1).max() - (1/(1 + np.exp(-self.Key_Para['Time'][0, 1]))))
@@ -1260,7 +1346,7 @@ if __name__== "__main__" :
         Num_Nodes_t = 10000
         Num_Nodes_s = 5606      # 1390  2472 5606 8686 11480 15566 22414
         Time = [0.0, 1.0]
-        eta = 100
+        eta = 1
         
         id_poly = 2
         id_BDF = 2
@@ -1294,7 +1380,7 @@ if __name__== "__main__" :
         Dim_time = 1
         Dim_space = 3
         Num_Nodes_t = 10000
-        Num_Nodes_s = 7366    # 1194 1872 4786 7366
+        Num_Nodes_s = 1806    # 54 96 192 270 390 1806 2904 7446 11406 30054 46710 61200 120390
         Time = [0.0, 1.0]
         eta = 100
 
@@ -1304,7 +1390,7 @@ if __name__== "__main__" :
 
 
         type_print = 'False'           # 'True'      'False' 
-        type_surface = 'Ellipsoid'  
+        type_surface = 'Sphere2'  
         type_node = 'Load'         # 'Load'  'Generate' 
         type_pre_plot = 'True'   # 'True'  'False'  
 
